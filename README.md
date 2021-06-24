@@ -44,4 +44,4 @@ git clone https://github.com/AAndersonSantos/CRUD_Firebase.git
 
 ## 📝**Licença**
 
-[MIT]()
+[MIT](https://github.com/AAndersonSantos/CRUD_Firebase/blob/main/LICENSE)
