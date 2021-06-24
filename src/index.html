@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista De Usuários</title>
+</head>
+
+<body class="tbody">
+
+    <div class="container">
+        <header>
+            <h3>Lista De Usuários</h3>
+        </header>
+        <div class="table-wrapper">
+            <table class="table-users">
+                <tr>
+                    <td class="titulo">Nome</td>
+                    <td class="titulo">Sobrenome</td>
+                    <td class="titulo">Telefone</td>
+                    <td class="titulo">E-mail</td>
+                    <td class="titulo">Editar/Deletar</td>     
+                </tr>
+            </table>
+            <button class="btn btn-add">Adicionar</button>
+        </div>
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Adicionar Novo Usuário</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form" autocomplete="off">
+                        <input type="text" name="firstName" placeholder="Nome" required>
+                        <input type="text" name="lastName" placeholder="Sobrenome" required>
+                        <input type="number" name="phone" placeholder="Telefone" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <button class="btn btn-modal">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Editar</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form" autocomplete="off">
+                        <input type="text" name="firstName" placeholder="Nome" required>
+                        <input type="text" name="lastName" placeholder="Sobrenome" required>
+                        <input type="number" name="phone" placeholder="Telefone" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <button class="btn btn-modal">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>Desenvolvido por: <span class="footerName">🚀Anderson Santos</span></footer>
+
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "########",
+        authDomain: "########",
+        projectId: "########",
+        storageBucket: "########",
+        messagingSenderId: "########",
+        appId: "########"
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+<script src="main.js"></script>
+
+</html>
