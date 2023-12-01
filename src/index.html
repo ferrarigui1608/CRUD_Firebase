@@ -61,9 +61,16 @@
             </div>
         </div>
     </div>
-
-    <footer>Desenvolvido por: <span class="footerName">🚀Anderson Santos</span></footer>
-
+    // Exemplo de regras mais permissivas (apenas para teste)
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write;
+        }
+      }
+    }
+    
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -76,12 +83,12 @@
 <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "########",
-        authDomain: "########",
-        projectId: "########",
-        storageBucket: "########",
-        messagingSenderId: "########",
-        appId: "########"
+        apiKey: "AIzaSyB92QLhsYNoBeYVt7ExxCjhsg3btn74T4k",
+        authDomain: "cadastro-d10c3.firebaseapp.com",
+        projectId: "cadastro-d10c3",
+        storageBucket: "cadastro-d10c3.appspot.com",
+        messagingSenderId: "1087013376346",
+        appId: "1:1087013376346:web:49ff90aa440de93ecc2363"
     }
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
